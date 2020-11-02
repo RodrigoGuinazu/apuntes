@@ -29,3 +29,5 @@ app.get('/listado', (req, res)=>{
 app.get('/login', (req, res)=>{
     res.end('Bienvenido al LogIn');
 })
+
+// Nodemon: en terminal escribir npm install nodemon -g. Ahora en vez de ejecutar con app.js ejecutamos con nodemon app.js. Esto lo que hace es recargar automatticamente los cambios hechos en el codigo, y ya no hace falta ejecutar nuevamente el codigo despues de hacer un cambio.
