@@ -29,3 +29,5 @@
 // 11) Para traer actualizaciones de una rama escribimos git pull origin nombreDelBranch
 
 // 12) Para enviar cambios a la rama remota escribimos git push origin nombreDelBranch
+
+// 13) En caso de clonar un repositorio de otra persona y quiero guardarlo en un repositorio propio escribimos git remote set-url origin link-repo
