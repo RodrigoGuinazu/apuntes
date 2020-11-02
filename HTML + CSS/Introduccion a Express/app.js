@@ -14,7 +14,7 @@
 
 const express = require('express');
 const app = express();
-productos = ['Autos ', 'Motos ', 'Camionetas']
+productos = ['Autos', ' Motos', ' Camionetas', ' Autos Electricos']
 
 app.listen(3000, ()=> console.log('Exito!'));
 
