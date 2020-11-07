@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Practicando CSS</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body id="fondo">
+        <h1>CSS</h1>
+        <p>Para que vincular el css con el html en el head hay que poner:
+             link="stylesheet" href="location css file" entre mayor y menor</p>
+        <div id="div1">
+            <h2>Selectores</h2>
+            <ul>
+                <li>ID: Para llamarlo usamos el #</li>
+                <li>Class: Para llamarlo usamos el . 
+                    Este tambien puede tener mas de una clase, solo se las separa con un espacio
+                </li>
+                <li>Etiquetas: Atrapa al elemento HTML con el mismo nombre de etiqueta, por ejemplo p, h1, ul, etc</li>
+                <li>Combinados: Afecta a los elementos que cumplan con todas las condiciones establezidas.
+                    Por ejemplo h2.subtitulos{color:red;} Afectaria a todos los subtitulos h2 que tengan la clase subtitulos.
+                </li>
+                <li>Descendentes: Sirven para agregar especifidad.
+                    Por ejemplo ul li#pares{text-align: center;} Afectaria a todas las listas que tengan el ID pares y se encuentren dentro de una lista desordenada
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="titulos">Propiedades</h2>
+            <ul>
+                <li>font-family: Permite elegir la tipografia</li>
+                <li>font-size: Permite definir el tamano tipografico. Recibe un valor numerico junto la unidad de medida. Ejemplo: {font-size: 15px;}</li>
+                <li>font-style: Define el estilo de la tipografia</li>
+                <li>font-weight: Peso de la tipografia. Ejemplo: Bold</li>
+                <li>text-align: Permite definir la alineacion. Puede ser left, center o right</li>
+                <li>text-decoration: Permite decorar el texto. Ejemplo: Underline</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="titulos colores">Colores y Fondos</h2>
+            <h3>Formato de colores</h3>
+            <ul>
+                <li id="descendentes">Hexadecimal: Ej: #F2F2F2</li>
+                <li id="descendentes">RGB: EJ: rgb(255, 0, 0)</li>
+                <li id="descendentes">RGB: EJ: rgba(255, 0, 0, 0.8) (A seria la opacidad que tiene valores de 0 a 1)</li>
+            </ul>
+            <h3>Fondos de Imagenes</h3>
+            <ul>
+                <li>background-image: Ejemplo: url(../img/fondo.jpg)</li>
+                <li>background-repeat: Puede ser repeat; no-repeat; repeat-x; repeat-y</li>
+                <li>background-position: Seguido de dos parametros(left; center; right; length) Donde el 1er parametro que pasemos sera en el eje x y el 2do en el eje y</li>
+                <li>background-attatchment: Puede ser scroll; fixed; local; initial; inherint</li>
+                <li>background-color: Puede ser en Hexadecimal; RGB; RGBA</li>
+                <li>background-size: Puede ser: cover; contain; length; percentage; inherint</li>
+            </ul>
+        </div>
+        <div>
+            <h2>Asi se ve en VSC</h2>
+            <img src="foto-codigo.jpg" alt="Codigo en VSC">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+#fondo {
+    background-image: url("https://blogs.esa.int/space19plus/files/2019/03/nebula.jpg");
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: orangered;
+    text-decoration: underline;
+}
+
+p {
+    font-weight: bold;
+    background-color: #F5D033;
+    font-size: medium;
+}
+
+#div1 {
+    background-color: darkblue;
+    color: white;
+}
+
+h2.titulos {
+    color: orange;
+    text-decoration: underline;
+}
+
+h2.titulos.colores {
+    background-color: purple;
+}
+
+h3 {
+    color: white;
+    background-color: green;
+}
+
+ul li#descendentes {
+    background-color: black;
+    color: red;
+}
+
+ul {
+    color: white;
+}
