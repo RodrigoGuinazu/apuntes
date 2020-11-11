@@ -1,0 +1,13 @@
+input:hover {
+    background-color: purple;
+}
+
+input:focus {
+    background-color: green;
+    color: white
+}
+
+body :nth-child(even) {
+    text-decoration: underline;
+    color: red;
+}

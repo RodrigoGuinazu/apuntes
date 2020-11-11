@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios en HTML</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="index.html">
+        <p>
+            <label for="nombre">Nombre:
+                <input type="text" name="nombre" id="nombre">
+            </label>
+        </p>
+        <p>
+            <label for="email">Email:
+                <input type="email" name="email" id="email">
+            </label>
+        </p>
+        <p>
+            <label for="password">Password:
+                <input type="password" name="password" id="password">
+            </label>
+        </p>
+        <p><label for="">Deseas recibir novedades de nuestros productos?</label></p>
+            <p><input type="radio" name="novedades" id="S" checked> Si</p>
+            <p><input type="radio" name="novedades" id="N"> No</p>
+        <p><label for="">Seleccione por lo menos 3 productos que le interesen</label></p>
+        <input type="checkbox" name="productos" value="Smartphones">Smartphones <br>
+        <input type="checkbox" name="productos" value="Cafeteras Nesspreso">Cafeteras Nesspreso <br>
+        <input type="checkbox" name="productos" value="Smart Tv">Smart Tv <br>
+        <input type="checkbox" name="productos" value="Guitarras">Guitarras <br>
+        <input type="checkbox" name="productos" value="Zapatillas">Zapatillas <br>
+        <input type="checkbox" name="productos" value="Notebooks">Notebooks <br>
+        <input type="checkbox" name="productos" value="Parlantes JBL">Parlantes JBL <br>
+        
+        <p><label for="">Recomendaciones para el catalogo</label></p>
+        <textarea name="recomendaciones" id="" cols="30" rows="10"></textarea>
+
+        <p><label for="">Elegi tu Pais de residencia</label></p>
+        <select name="pais" id="">
+            <option value="Ar">Argentina</option>
+            <option value="Br">Brasil</option>
+            <option value="Ur">Uruguay</option>
+            <option value="Cl">Chile</option>
+            <option value="Py">Paraguay</option>
+        </select>
+
+        <p><button type="submit">Enviar</button></p>
+        <p><button type="reset">Resetear Formulario</button></p>
+    </form>
+</body>
+</html>
