@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas y Modelo de Cajas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Etiquetas y Modelo de Cajas</h1>
+    <h2 class="subtitulo">Etiquetas</h2>
+    <h3>strong:</h3>
+    <p>Indica al buscador que <strong></strong> el elemento es importante.</strong> Por defecto el texto ser vera en negrita</p>
+    <h3>em:</h3>
+    <p>Indica al buscador que <em>el elemento lleva enfasis.</em> Por defecto el texto se vera en cursiva</p>
+    <h3>mark:</h3>
+    <p><mark>Destaca una parte del texto que sea relevante.</mark> Por defecto se vera con un fondo amarillo</p>
+    <h3>cite:</h3>
+    <p>Cita un libro, pelicula, pintura, etc... <cite>A la grande le puse cuca</cite></p>
+    <h3>abbr:</h3>
+    <p>Define una abreviacion. Al pasar el mouse sobre ella veremos lo que definimos en el atributo title. Ejemplo: <abbr title="Rodrigo Guinazu">RG</abbr></p>
+    <h3>section:</h3>
+    <p>Define una seccion de contenido monotematico</p>
+    <h3>article:</h3>
+    <p>Define un fragmento de informacion dentro de una seccion</p>
+    <h3>header:</h3>
+    <p>Define la cabecera de un contenido determinado o del documento</p>
+    <h3>footer:</h3>
+    <p>Define el pie de un contenido determinado o del documento</p>
+    <h2 class="vsc">Como se ve en VSC:</h2>
+    <img src="etiquetas-semanticas.jpg" alt="Imagen de Etiquetas Semanticas en VSC">
+    <h2>Tipos de Elementos</h2>
+    <h3>Etiquetas de Bloque:</h3>
+    <p>Estas intentan ocupar el 100% del ancho del sitio. Un ejemplo de estas etiquetas seria el div</p>
+    <h3>Etiquetas de Linea:</h3>
+    <p>Estas solo ocupan el ancho de su contenido y no cambian la distribucion del sitio, no generan saltos de linea. Un ejemplo de estas etiquetas seria el span</p>
+    <h2>Propiedad Display (CSS)</h2>
+    <ul>
+        <li>display: inline; : Define un elemento con comportamiento en linea</li>
+        <li>display: block; : Define un elemento con comportamiento en bloque</li>
+        <li>display: inline-block; : Define un elemento con comportamiento de semi-bloque</li>
+        <li>display: none; : Oculta un elemento en la parte visual</li>
+    </ul>
+    <h2 class="subtitulo">Modelo de Caja</h2>
+    <ul>
+        <li>width:
+            <p>Si esta no se declara, el ancho del elemento sera del 100% de su padre contenedor. Se le asigna valores en px y %</p>
+        </li>
+        <li>height:
+            <p>Si esta no se declara, el alto sera igual a la altura que le proporcione su contenido. Se le asigna valores en px</p>
+        </li>
+        <li>padding:
+            <p>Es el margen interior del elemento. Sus valores pueden asignarse indicando solo 1 valor que sera igual para todos los lados, o con 2 valores, donde el 1ero sera para arriba y abajo, y el 2do sera para izquierda y derecha</p>
+        </li>
+        <li>border:
+            <p>Borde del elemento. En esta se define con estilos de linea, tamano y color. Ejemplo: border: solid 3px green;</p>
+        </li>
+        <li>margin:
+            <p>Margen del elemento. Separa una caja de otra. Sus valores pueden asignarse indicando solo 1 valor que sera igual para todos los lados, o con 2 valores, donde el 1ero sera para arriba y abajo, y el 2do sera para izquierda y derecha</p>
+        </li>
+        <li>box-sizing:
+            <p>Descuenta automaticamente el ancho y alto que se agregue con el borde y el padding. Solo se le suma el margin</p>
+        </li>
+    </ul>
+    <div class="caja1">Probando el Modelo de Caja 1</div>
+    <div class="caja2">Probando el Modelo de Caja 2</div>
+    <h2 class="vsc">Como se ve en VSC: </h2>
+    <img src="modelo-de-cajas.jpg" alt="Imagen de Modelo de Cajas en VSC">
+</body>
+</html>

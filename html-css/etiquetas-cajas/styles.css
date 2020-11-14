@@ -1,0 +1,28 @@
+.caja1 {
+    background-color: green;
+    width: 150px;
+    height: 130px;
+    padding: 12px;
+    border: dotted 3px red;
+    margin: 30px;
+}
+
+.caja2 {
+    background-color: purple;
+    width: 150px;
+    height: 130px;
+    padding: 12px;
+    border: dotted 3px yellow;
+    margin: 30px;
+    box-sizing: border-box;
+}
+
+.vsc {
+    font-size: larger;
+    color: rgb(0, 81, 255);
+}
+
+.subtitulo {
+    background-color: purple;
+    color: yellow;
+}
