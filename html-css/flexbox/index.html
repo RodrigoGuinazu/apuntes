@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="caja-fija">Soy una caja Fija</div>
+
+        <p>Para comenzar a trabajar con Flexbox tenemos que definir un flex container, asi habilitamos un contexto flex para trabajar con los hijos directos del elemento.</p>
+        <h2>flex-container</h2>
+        <div class="flex-container">
+            <div class="hijo-1">flex-item-1</div>
+            <div class="hijo-2">flex-item-2</div>
+            <div class="hijo-3">flex-item-3</div>
+            <div class="hijo-4">flex-item-4</div>
+        </div>
+
+        <h2>flex-wrap</h2>
+        <p>Por defecto los elementos hijos de un contenedor flex intentan todos entrar en una misma linea. Para que se respete el ancho de los elementos hijos usamos esta propiedad</p>
+        <div class="flex-container flex-wrap">
+            <div class="hijo-1">A</div>
+            <div class="hijo-2">B</div>
+            <div class="hijo-3">C</div>
+            <div class="hijo-4">D</div>
+        </div>
+        <img src="flex-wrap.jpg" alt="codigo-flex-wrap">
+        
+        <h2>flex-direction</h2>
+        <p>Con esta propiedad definimos el main axis del contenedor. El cross axis (eje transversal) sera la direccion perpendicular al main axis</p>
+        <ul>
+            <li>row</li>
+            <p>Los items se disponen en el eje x, de izquierda a derecha</p>
+            <div class="flex-container row">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+                <div class="hijo-4">D</div>
+            </div>
+            <br>
+            <li>row-reverse</li>
+            <p>Los items se disponen en el eje x, de derecha a izquierda</p>
+            <div class="flex-container row-reverse">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+                <div class="hijo-4">D</div>
+            </div>
+            <br>
+            <li>column</li>
+            <p>Los items se disponen en el eje y, de arriba a abajo</p>
+            <div class="flex-container column">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+                <div class="hijo-4">D</div>
+            </div>
+            <br>
+            <li>column-reverse</li>
+            <p>Los items se disponen en el eje y, de abajo a arriba</p>
+            <div class="flex-container column-reverse">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+                <div class="hijo-4">D</div>
+            </div>
+        </ul>
+        <img src="flex-direction.jpg" alt="codigo-flex-direction">
+
+        <h2>justify-content</h2>
+        <ul>
+            <li>flex-start</li>
+            <p>Los items se alinean respecto del inicio del main axis que hayamos definido</p>
+                <div class="flex-container justify-content-flex-start">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+            <li>flex-end</li>
+            <p>Los items se alinean respecto del final del main axis que hayamos definido</p>
+                <div class="flex-container justify-content-flex-end">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+    
+            </div>
+            <br>
+            <li>center</li>
+            <p>Se alinean en el centro del main axis</p>
+                <div class="flex-container justify-content-center">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+            <li>space-between</li>
+            <p>Los items se distribuyen de manera uniforme</p>
+                <div class="flex-container justify-content-space-between">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+    
+            </div>
+            <br>
+            <li>space-around</li>
+            <p>Los items se distribuyen de manera uniforme, pero con un espacio al rededor de cada uno</p>
+                <div class="flex-container justify-content-space-around">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+        </ul>
+        <img src="justify-content.jpg" alt="codigo-justify-content">
+
+        <h2>align-items</h2>
+        <ul>
+            <li>stretch</li>
+            <p>Los items se ajustan para abarcar todo el contenedor</p>
+                <div class="flex-container align-items-stretch">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+            <li>flex-start</li>
+            <p>Los items se alinean al inicio del eje transversal</p>
+                <div class="flex-container align-items-flex-start">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+            <li>flex-end</li>
+            <p>Los items se alinean al final del eje transversal</p>
+                <div class="flex-container align-items-flex-end">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+            <li>center</li>
+            <p>Se alinean en el centro del eje transversal</p>
+                <div class="flex-container align-items-center">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+        </ul>
+        <img src="align-items.jpg" alt="codigo-align-items">
+
+        <h2>order</h2>
+        <p>Con esta propiedad controlamos el orden de cada item</p>
+        <div class="flex-container order">
+            <div class="hijo-1">1</div>
+            <div class="hijo-2">2</div>
+            <div class="hijo-3">3</div>
+            <div class="hijo-4">4</div>
+        </div>
+        <img src="order.jpg" alt="codigo-order">
+
+        <h2>flex-grow</h2>
+        <p>Definimos cuanto puede llegar a crecer un item en caso de disponer espacio libre en el contenedor</p>
+        <div class="flex-container flex-grow">
+            <div class="hijo-1">A</div>
+            <div class="hijo-2">B</div>
+        </div>
+        <img src="flex-grow.jpg" alt="codigo-flex-grow">
+
+        <h2>align-self</h2>
+        <p>Nos permite alinear sobre el cross axis a cada item al que le apliquemos esta propiedad</p>
+        <ul>
+            <li>flex-end</li>
+            <p>El item se alinea al final del eje transversal</p>
+            <div class="flex-container align-self-flex-end-padre">
+                    <div class="hijo-1">A</div>
+                    <div class="hijo-2">B</div>
+                    <div class="hijo-3">C</div>
+        
+            </div>
+            <br>
+            <li>center</li>
+            <p>El item se alinea al centro del eje transversal</p>
+            <div class="flex-container align-self-center-padre">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+    
+            </div>
+            <br>
+            <li>flex-start</li>
+            <p>El item se alinea al inicio del eje transversal</p>
+            <div class="flex-container align-self-flex-start-padre">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+            <li>stretch</li>
+            <p>El item se ajusta hasta abarcar todo el cross axis, siempre y cuando no tenga definida una altura y el contenedor padre tenga la regla flex-wrap: wrap;</p>
+            <div class="flex-container align-self-stretch-padre">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <br>
+            <p>Estas propiedades funcionan independientemente de la alineacion que se haya definido en el contenedor flex con align-items y el padre contenedor sea un flex-container</p>
+        </ul>
+        <img src="align-self.jpg" alt="codigo-align-self">
+
+            <h2>Posicionamiento relativo</h2>
+            <p>Cuando movemos una caja, el punto de referencia sera sus propios costados</p>
+            <div class="flex-container posicionamiento-relativo">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <p>Cuando movemos una caja de manera relativa, el espacio que ocupaba originalmente seguira ocupado</p>
+            <img src="posicionamiento-relativo.jpg" alt="codigo-posicionamiento-relativo">
+
+            <h2>Posicionamiento absoluto</h2>
+            <p>Cuando movemos una caja, el punto de referencia seran los costados del body</p>
+            <div class="flex-container posicionamiento-absoluto">
+                <div class="hijo-1">right: 50px;<br>
+                top: 22000px;</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <p>Cuando movemos una caja de manera relativa, el espacio que ocupaba originalmente quedara libre y otros elementos podran ocuparlo</p>
+            <img src="posicionamiento-absoluto.jpg" alt="codigo-posicionamiento-absoluto">
+
+            <h2>Relativo + Absoluto</h2>
+            <p>Si queremos cambiar el punto de referencia para un posicionamiento absoluto, debemos hacer relativo al padre</p>
+            <p>Cuando movemos una caja de manera relativa, el espacio que ocupaba originalmente seguira ocupado</p>
+            <div class="flex-container posicionamiento-relativo-y-absoluto">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+                <div class="hijo-4">D</div>
+            </div>
+            <img src="posicionamiento-relativo-y-absoluto.jpg" alt="codigo-posicionamiento-relativo-y-absoluto">
+
+            <h2>Posicionamiento fijo</h2>
+            <p>Con el posicionamiento fijo, los puntos de referencia seran los costados de la ventana del navegador<br>
+            Sin importar que hagamos scroll, el elemento se mantendra fijo.<br>
+            Como ejemplo podemos observar la barra de arriba la cual nos acompaña por toda la pagina.
+            </p>
+            <img src="posicionamiento-fijo.jpg" alt="codigo-posicionamiento-fijo">
+
+            <h2>z-index</h2>
+            <p>Permite cambiar el orden de las capas. Solo funciona si el elemento tiene un posicionamiento relativo, absoluto o fijo<br>
+            Siempre va figurar el elemento que tenga mayor z-index. Por defecto es 0.
+            </p>
+            <div class="flex-container z-index">
+                <div class="hijo-1">A</div>
+                <div class="hijo-2">B</div>
+                <div class="hijo-3">C</div>
+            </div>
+            <img src="z-index.jpg" alt="codigo-z-index">
+
+        </ul>
+    </main>
+</body>
+</html>
