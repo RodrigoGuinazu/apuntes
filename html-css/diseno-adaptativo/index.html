@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseno Adaptativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h2>Etiqueta Viewport</h2>
+        <img src="viewport.jpg" alt="Foto viewport">
+
+        <h2>Viewport Measures</h2>
+        <ul>
+            <li>
+                vw (viewport width)
+            </li>
+            <li>
+                vh (viewport height)
+            </li>
+        </ul>
+        <p>Estas dos siempre tomaran como eje referencial al viewport del documento</p>
+        <div class="viewport-measures">Tengo un height de 20vh; y un width de 25vw;</div>
+        <img src="viewport-measure.png" alt="Foto viewport-measure">
+
+
+        <h2>Media Query</h2>
+        <p>Estos son conjuntos de reglas CSS que permiten reorganizar el contenido dependiendo de las condiciones de visualizacion del documento</p>
+        <ul>
+            <li>
+                @media (min-width: 460px) {} <br>
+                Las reglas se aplican a partir de los 461px de width
+                <p></p>
+            </li>
+            <li>
+                @media (max-width: 460px) {} <br>
+                Las reglas se aplican solo si hay como maximo 460px de width
+                <p></p>
+            </li>
+            <li>
+                @media (min-width: 460px) and (orientation: landscape) {} <br>
+                Las reglas se aplican solo si hay como maximo 460px de width y la orientacion del dispositivo esta en landscape
+            </li>
+        </ul>
+        <img src="media-query.png" alt="Foto media-query">
+        
+    </main>
+</body>
+</html>

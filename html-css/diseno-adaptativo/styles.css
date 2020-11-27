@@ -1,0 +1,32 @@
+h2 {
+    background-color: yellowgreen;
+}
+
+.viewport-measures {
+    height: 20vh;
+    width: 25vw;
+    background-color: purple;
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 460px) {
+    main{
+        background-color: lightcoral;
+    }
+}
+
+@media (max-width: 460px) {
+    main{
+        background-color: lightseagreen;
+    }
+}
+
+@media (max-width: 460px) and (orientation: landscape) {
+    main{
+        background-color: orange;
+    }
+}
