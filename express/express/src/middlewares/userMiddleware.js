@@ -6,7 +6,7 @@ let userMiddleware = {
             next();
         }
     },
-    guest: function(req, res, next) {
+    guest: function(req, res, next) {           // ESTE MIDDLEWARE SE ENCARGA DE RENSTRINGIR EL ACCESO A USUARIOS QUE SEAN VISITANTES O QUE ESTEN LOGUEADOS
         if(req.session.usuario){
             next();
         } else {

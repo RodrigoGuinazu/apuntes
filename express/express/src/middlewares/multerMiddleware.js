@@ -5,8 +5,8 @@ let path = require('path');
     destination: function (req, file, cb) {
       cb(null, 'public/images/users')
     },
-    filename: function (req, file, cb) {
-      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+    filename: function (req, file, cb) {                                              
+      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))   // MIDDLEWARE PARA SUBIR IMAGENES
     },
   })
 

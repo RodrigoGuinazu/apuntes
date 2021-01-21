@@ -1,9 +1,9 @@
 const express = require('express');
 let loginController = require('../controllers/userController');
-let multerMiddleware = require('../middlewares/multerMiddleware');
-let { check, validationResult, body } = require('express-validator');
-const registrationValidate = require('../middlewares/registrationValidate');
-const userMiddleware = require('../middlewares/userMiddleware');
+let multerMiddleware = require('../middlewares/multerMiddleware'); // SE REQUIERE EL multerMiddlware.js
+let { check, validationResult, body } = require('express-validator'); // EXPRESS VALIDATOR
+const registrationValidate = require('../middlewares/registrationValidate'); // SE REQUIERE EL registrationValidate.js
+const userMiddleware = require('../middlewares/userMiddleware'); // SE REQUIERE EL userMiddleware.js
 
 let router = express.Router();
 router.get('/', userMiddleware.guest, loginController.profile);
