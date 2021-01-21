@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editar usuario</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <h1>Editando el Usuario <%= user.email %> </h1>
+    <form action="/users/edit?_method=PATCH" method="POST" enctype="multipart/form-data"> <!-- NO OLVIDAR ENCTYPE CUANDO QUEREMOS SUBIR UNA IMAGEN CON MULTER -->
+        <label for="">E-mail</label>
+        <input type="email" name="email" id="email" value=<%= user.email %>>
+        <label for="">Nombre</label>
+        <input id="nombre" name="nombre" type="text" value=<%= user.nombre %>>
+        <label for="">Apellido</label>
+        <input id="apellido" name="apellido" type="text" value=<%= user.apellido %>>
+        <label for="">Cambia tu Foto de perfil</label>
+        <input type="file" name="fotoPerfil" id="foto-perfil">
+        <button type="submit">Editar Usuario</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <section align="center">
+        <div class="lista-errores">
+            <% if (typeof errors != "undefined") { %>
+                <i class="fas fa-exclamation-circle"></i>
+                <ul class="lista-errores ul">
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li class="lista-errores li">
+                            <%= errors[i].msg %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
+    </section>
+    <form method="POST" action="/users/register">
+        <input type="email" name="email" id="email" placeholder="email">
+        <input id="nombre" name="nombre" type="text" placeholder="Nombre">
+        <input id="apellido" name="apellido" type="text" placeholder="Apellido">
+        <input id="password" name="password" type="password" placeholder="password">
+        <!-- <input id="re-password" name="re-password" type="re-password" placeholder="re-password"> -->
+        <button type="submit">Register</button>
+        <br>
+        <a href="/users/login">Ir al Log In</a>
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <section align="center">
+        <div class="lista-errores">
+            <% if (typeof errors != "undefined") { %>
+                <i class="fas fa-exclamation-circle"></i>
+                <ul class="lista-errores ul">
+                    <% for (let i = 0; i < errors.length; i++) { %>
+                        <li class="lista-errores li">
+                            <%= errors[i].msg %>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
+    </section>
+    <form method="POST">
+        <input type="email" name="email" id="email" placeholder="email">
+        <input id="password" name="password" type="password" placeholder="password">
+        <input type="checkbox" name="remindme" value="remindme"> Recordarme
+        <button type="submit">Login</button>
+        <label for="">No tenes cuenta? </label>
+        <a href="/users/register">Registrate</a>
+    </form>
+</body>
+</html>

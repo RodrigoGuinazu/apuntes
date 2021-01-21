@@ -1,0 +1,30 @@
+[{
+    "id": 1,
+    "email": "rodrigg2008@hotmail.com",
+    "nombre": "Rodrigo",
+    "apellido": "Guinazu",
+    "fotoPerfil": "lolo.jpg",
+    "password": "$2y$10$z8khwvDflXIoxr1rqH1W8uHRyvLUNcYE5QrG/yyd.8aV3oGp3wCqK "
+}, {
+    "id": 2,
+    "email": "probando4@hotmail.com",
+    "nombre": "Tu",
+    "apellido": "Ma",
+    "fotoPerfil": "",
+    "password": "$2b$10$1nKWTz3xSUqb39bBg2IUcehViMEdxQ4gxg/szdtdGqOC1w7T7LvyW"
+}, {
+    "id": 3,
+    "email": "admin@hotmail.com",
+    "nombre": "admin",
+    "apellido": "hola 123",
+    "fotoPerfil": "",
+    "password": "$2b$10$iKKhsAM4wirvp7cTk7DQieZZay6E30j2OiMGy46yPRBM7wSisOQ6e",
+    "imagen": "fotoPerfil-1611270400433.jpg"
+}, {
+    "id": 4,
+    "email": "prueba1234@hotmail.com",
+    "nombre": "prueba",
+    "apellido": "123",
+    "fotoPerfil": "",
+    "password": "$2b$10$T..1vf.JNj8NxV6iiKwlweLhwHsNgMsVXLEO41wRVLOpFMBfjZ81m"
+}]

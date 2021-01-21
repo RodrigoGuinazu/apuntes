@@ -1,0 +1,49 @@
+[
+    {
+        "id": 1,
+        "nombre": "Nico", 
+        "apellido": "Barreda",
+        "edad": 29,
+        "rol": "user"
+    },
+
+    {
+        "id": 2,
+        "nombre": "Facu", 
+        "apellido": "Baggins",
+        "edad": 26,
+        "rol": "user"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Marisa", 
+        "apellido": "Garcia",
+        "edad": 57,
+        "rol": "user"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Cacha", 
+        "apellido": "Guinazu",
+        "edad": 60,
+        "rol": "user"
+    },
+    
+    {
+        "id": 5,
+        "nombre": "Lolo", 
+        "apellido": "Guinazu",
+        "edad": 69,
+        "rol": "admin"
+    },
+
+    {
+        "id": 6,
+        "nombre": "Esteban", 
+        "apellido": "Quito",
+        "edad": 49,
+        "rol": "admin"
+    } 
+]

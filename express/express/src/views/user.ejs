@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <h1>id: <%= user.id %></h1>
+    <h1>nombre: <%= user.nombre %></h1>
+    <h1>apellido: <%= user.apellido %></h1>
+    <h1>email: <%= user.email %></h1>
+    <h1>foto de perfil:</h1>
+    <img src="/images/users/<%= user.fotoPerfil %>" alt="Foto de perfil"> 
+    <br>
+    <br>
+    <a href="/users/edit">Editar usuario</a>
+    <br>
+    <br>
+    <a href="/users/logout">Log Out</a>
+</body>
+</html>

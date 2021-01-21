@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    <p>El Navbar fue solicitado con la etiqueta include</p>
+    <br>
+    <h2>Users</h2>
+    <% user.forEach(usuario => { %>
+        <article>
+            <h3> id:  <%= usuario.id %>  </h3>
+            <h2> Nombre:  <%= usuario.nombre %>  </h2>
+            <h2> Apellido:  <%= usuario.apellido %>  </h2>
+            <h3> Edad:  <%= usuario.edad %>  </h3>
+        </article>
+        <br>
+    <% }) %>
+
+    <h2>Admins</h2>
+    <% admin.forEach(usuario => { %>
+        <article>
+            <h3> id:  <%= usuario.id %>  </h3>
+            <h2> Nombre:  <%= usuario.nombre %>  </h2>
+            <h2> Apellido:  <%= usuario.apellido %>  </h2>
+            <h3> Edad:  <%= usuario.edad %>  </h3>
+        </article>
+        <br>
+    <% }) %>
+</body>
+</html>
