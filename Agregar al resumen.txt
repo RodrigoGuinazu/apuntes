@@ -1,0 +1,5 @@
+db.create/db.update con relaciones muchos a muchos
+
+softDelete (paranoid en los modelos)
+
+Scope en los modelos
