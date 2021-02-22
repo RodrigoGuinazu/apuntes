@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Log In</h1>
+    <div>
+        <% if (typeof errors != "undefined") { %>
+            <ul>
+                <% for (let i = 0; i < errors.length; i++) { %>
+                    <li>
+                        <%= errors[i].msg %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+    <form action="/users/login" method="POST">
+        <input type="email" name="email" id="email" placeholder="email">
+        <input id="password" name="password" type="password" placeholder="password">
+        <button type="submit">Login</button>
+        <label for="">No tenes cuenta? </label>
+        <a href="/users/register">Registrate</a>
+    </form>
+</body>
+</html>

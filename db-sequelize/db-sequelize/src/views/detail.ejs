@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+</head>
+<body>
+    <a href="/products">Listado de Productos</a>
+    <a href="/products/<%= productDetail.id %>/edit">Editar este Producto</a>
+    <h1><%= productDetail.name %></h1>
+        <h2>Precio: <%= productDetail.price %> </h2>
+        <div><img src="/images/products/<%= productDetail.image %>" alt=""></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Register</h1>
+    <form method="POST" action="/users/register">
+        <input type="email" name="email" id="email" placeholder="email">
+        <input id="name" name="name" type="text" placeholder="Nombre">
+        <input id="password" name="password" type="password" placeholder="password">
+        <button type="submit">Register</button>
+        <br>
+        <a href="/users/login">Ir al LogIn</a>
+    </form>
+</body>
+</html>

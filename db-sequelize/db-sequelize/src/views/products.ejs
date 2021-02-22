@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado de Productos</h1>
+    <a href="/products/create">Crear Un Producto</a>
+    <% products.forEach(product => { %>
+        <div align="center" style="border-bottom: 3px red solid;">
+            <h2>Producto: <%= product.name %> </h2>
+            <img style="max-width: 500px;" src="images/products/<%= product.image %>" alt="">
+            <h2>Precio: <%= product.price %> </h2>
+            <h2>Imagen: </h2>
+            <a href="/products/<%= product.id %>">Ir al detalle</a>
+        </div>
+    <% }) %> 
+</body>
+</html>

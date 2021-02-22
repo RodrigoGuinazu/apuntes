@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editar usuario</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Editando el Producto <%= productToEdit.id %> </h1>
+    <form action="/products/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data"> <!-- NO OLVIDAR ENCTYPE CUANDO QUEREMOS SUBIR UNA IMAGEN CON MULTER -->
+        <input type="text" name="name" id="name" value="<%= productToEdit.name %>">
+        <input id="price" name="price" type="text" value="<%= productToEdit.price %>">
+        <input id="image" name="image" type="file" value="Imagen">
+        <button type="submit">Editar Producto</button>
+    </form>
+    <form action="/products/<%= productToEdit.id %>?_method=DELETE" method="POST"> <!-- FORM INDEPENDIENTE PARA BORRAR -->
+    <button style="color: crimson;" type="submit">Eliminar Producto</button> <!-- HACER UN BUTTON TIPO SUBMIT PARA ENVIAR EL FORM Y QUE LO BORRE -->
+    </form>
+</body>
+</html>

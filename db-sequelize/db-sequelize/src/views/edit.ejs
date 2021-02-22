@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editar usuario</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Editando el Usuario <%= user.email %> </h1>
+    <form action="/users/edit?_method=PATCH" method="POST">
+        <label for="">E-mail</label>
+        <input type="email" name="email" id="email" value=<%= user.email %>>
+        <label for="">Nombre</label>
+        <input id="name" name="name" type="text" value=<%= user.name %>>
+        <button type="submit">Editar Usuario</button>
+    </form>
+</body>
+</html>

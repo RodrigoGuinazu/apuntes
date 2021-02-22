@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crear producto</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <h1>Crear Producto</h1>
+    <form action="/products" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" id="name" placeholder="Titulo del Producto">
+        <input id="price" name="price" type="text" placeholder="Precio">
+        <input id="image" name="image" type="file" placeholder="Imagen" required>
+        <button type="submit">Crear Producto</button>
+    </form>
+</body>
+</html>
