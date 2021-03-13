@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Validación de Formularios</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<h2>Formulario de registro</h2>
+					<form method="post" class="contact-form" action="index.hmtl">
+						<div class="form-group">
+							<label for="fullName">Nombre completo</label>
+							<input type="text" name="fullName" id="fullName" class="form-control">
+							<div class="fullName invalid-feedback"></div>
+						</div>
+						<div class="form-group">
+							<label for="email">Correo electrónico</label>
+							<input type="email" name="email" id="email" class="form-control">
+							<div class="email invalid-feedback"></div>
+						</div>
+						<div class="form-group">
+							<label for="phone">Teléfono de contacto</label>
+							<input type="text" name="phone" id="phone" class="form-control">
+							<div class="phone invalid-feedback"></div>
+						</div>
+						<div class="form-group">
+							<label for="password">Contraseña</label>
+							<input type="password" name="password" id="password" class="form-control">
+							<div class="password invalid-feedback"></div>
+						</div>
+						<div class="form-group">
+							<label for="rePassword">Repetir Contraseña</label>
+							<input type="password" name="rePassword" id="rePassword" class="form-control">
+							<div class="rePassword invalid-feedback"></div>
+						</div>
+						<div class="form-group">
+							<label for="country">País de nacimiento</label>
+							<select class="form-control" name="country" id="country">
+								<option value="">Elegí tu país</option>
+								<option value="Argentina">Argentina</option>
+								<option value="Bolivia">Bolivia</option>
+								<option value="Brasil">Brasil</option>
+								<option value="Chile">Chile</option>
+								<option value="Colombia">Colombia</option>
+								<option value="Ecuador">Ecuador</option>
+								<option value="Paraguay">Paraguay</option>
+								<option value="Perú">Perú</option>
+								<option value="Uruguay">Uruguay</option>
+								<option value="Venezuela">Venezuela</option>
+							</select>
+							<div class="country invalid-feedback"></div>
+						</div>
+						<button type="submit" class="btn btn-success">ENVIAR</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	<script src="./js/validaciones.js"></script>
+	</body>
+</html>
