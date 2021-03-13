@@ -1,0 +1,13 @@
+<%- include("../header")  %>
+<p class="d-flex justify-content-between align-items-center">
+    <span>All Movies</span> 
+    <a href="/movies/create" class="btn btn-sm btn-primary">Add movie</a>
+</p>
+<hr>
+<ul>
+<% for (movie of movies) {%>
+    <li><a href="/movies/<%= movie.id %> "><%= movie.title %> </a></li>
+<% } %>
+</ul>
+
+<%- include("../footer")  %>

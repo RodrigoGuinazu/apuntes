@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: 'Carrito', image: ''}) %>
+
+<body>
+   <!-- Header -->
+   <%- include('../partials/headerNavbar') %>
+   <!-- /Header -->
+
+   <div class="container products-wrapper">
+      <% if(items.length != 0){ %>
+      <div class="row">
+         <div class="col-12">
+            <h1 class="products-title">Carrito de compras</h1>
+         </div>
+      </div>
+      <div class="product-detail">
+         <div class="row">
+            <div class="col-12 col-lg-8 pt-4">
+               <% items.forEach(item => { %>
+               
+               <div class="col-12 mt-3">
+                  <section class="row">
+                     <figure class="col-3" >
+                        <img style='border: 1px solid grey' src="/images/products/<%= item.product.image %>" alt="<%= item.product.name %>">
+                     </figure>
+                     <section class="col-6 info">
+                        <p class="product-detail-price">
+                           $<%= item.salePrice; %>
+                        </p>
+                        <p><%= item.product.name %></p>
+                     </section>
+                     <section class="col-3">
+                        <p>Cantidad: <%= item.quantity %></p>
+                        <form action="/users/deleteFromCart" method="POST" class="mt-4">
+                           <input type="hidden" name="itemId" value="<%= item.id %>">
+                           <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form>
+                     </section>
+                  </section>
+               </div>
+               <hr>
+               <% }); %>
+               
+            </div>
+            <div class="col-12 col-lg-4">
+               <article class="product-detail-info">
+                  <h2 class="product-detail-title">
+                     Total: $<%= items.reduce((total, item) => total + item.subTotal, 0) %>
+                  </h2>
+                  <hr>
+
+                  <form action="/users/shop" method="POST"  style="display: inline-bock">
+                     <input type="hidden" name="userId" value="<%= locals.user.id %>">
+                     <button style="display: inline-block; width: 100%;" type="submit" class="mt-4 buy-now-button">COMPRAR</button>
+                  </form>
+                  <hr>
+                  
+               </article>
+            </div>
+         </div>
+      </div>
+      <% } else { %>
+      <div class="col-12">
+         <h2 class="products-title" style="padding: 100px 0; color: tomato;">Todavia no agregaste productos al carrito</h2>
+      </div>
+      <% } %>
+   </div>
+
+   <!-- footer -->
+   <%- include('../partials/footer') %>
+   <!-- /footer -->
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: 'Iniciar sesión', image: ''}) %>
+
+<body>
+	<!-- Header -->
+	<%- include('../partials/headerNavbar') %>
+	<!-- /Header -->
+
+	<div class="container products-wrapper">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h2 class="products-title">Login</h2>
+			</div>
+			<div class="col-6"> 
+				<form action="/users/login/" method="POST">
+					<div class="row product-detail">
+						<div class="col-12">
+							<label for="email" class="form-label">Email:</label>
+							<input type="text" id="email" name="email" placeholder="Ej: gonza@dh.com" class="form-input" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+							<p class="error"><%= typeof errors == 'undefined' ? '' : errors.email ? errors.email.msg : '' %></p>
+						</div>
+						<div class="col-12">
+							<label for="price" class="form-label">Contraseña:</label>
+							<input type="password" id="password" name="password" class="form-input">
+						</div>
+						<div class="col-12">
+							<label for="remember" class="form-label">Recuérdame</label>
+							<input type="checkbox" id="remember" name="remember" class="form-check">
+						</div>
+						<div class="col-12 mt-5">
+							<button type="submit" class="buy-now-button">Iniciar sesión</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>
+
+</html>

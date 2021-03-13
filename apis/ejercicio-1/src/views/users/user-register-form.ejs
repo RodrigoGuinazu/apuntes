@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: 'Registro', image: ''}) %>
+<body>
+	<!-- Header -->
+	<%- include('../partials/headerNavbar') %>
+	<!-- /Header -->
+
+	<div class="container products-wrapper">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<h2 class="products-title">Registro</h2>
+			</div>
+			<div class="col-6">
+				<form action="/users/register" method="POST" enctype="multipart/form-data">
+					<div class="row product-detail">
+						<div class="col-12">
+							<label for="username" class="form-label">Username: *</label>
+							<input type="text" id="username" name="username" placeholder="Ej: gonza123" class="form-input"
+								value="<%= typeof old != 'undefined' ? old.username : '' %>">
+							<p class="error"><%= typeof errors == 'undefined' ? '' : errors.username ? errors.username.msg : '' %></p>
+						</div>
+						<div class="col-12">
+							<label for="email" class="form-label">Email: *</label>
+							<input type="text" id="email" name="email" placeholder="Ej: gonza@dh.com" class="form-input" value="<%= typeof old != 'undefined' ? old.email : '' %>">
+							<p class="error"><%= typeof errors == 'undefined' ? '' : errors.email ? errors.email.msg : '' %></p>
+						</div>
+						<div class="col-12 row">
+							<label for="image" class="form-label col-12">Avatar:</label>
+							<input type="file" id="image" name="image" class="form-file col-12">
+							<div class="col-12">
+								<p class="error"><%= typeof errors == 'undefined' ? '' : errors.image ? errors.image.msg : '' %></p>
+							</div>
+						</div>
+						<div class="col-12">
+							<label for="password" class="form-label">Contraseña: *</label>
+							<input type="password" id="password" name="password" class="form-input">
+							<p class="error"><%= typeof errors == 'undefined' ? '' : errors.password ? errors.password.msg : '' %></p>
+						</div>
+						<div class="col-12">
+							<label for="retype" class="form-label">Repite la contraseña: *</label>
+							<input type="password" id="retype" name="retype" class="form-input">
+							<p class="error"><%= typeof errors == 'undefined' ? '' : errors.retype ? errors.retype.msg : '' %></p>
+						</div>
+						<div class="mt-5 col-12">
+							<button type="submit" class="buy-now-button">Guardar producto</button>
+						</div>
+						<div class="mt-3 col-12">
+							<p>(*) Campos obligatorios.</p>
+						</div>
+					</div>
+				</form>
+				<div class="g-signin2 mt-5" data-onsuccess="onSignIn"></div>
+			</div>
+		</div>
+
+	</div>
+	<!-- /todos los productos -->
+
+	<!-- footer -->
+	<%- include('../partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

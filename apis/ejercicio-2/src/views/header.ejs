@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IMDB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <header>
+        <h1><a href="/">IMDB</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/movies">Movies</a></li>
+                <li><a href="/movies/recommended">Recommended</a></li>
+                <li><a href="/movies/news">News</a></li>
+                <li>
+                    <form action="/movies/search" method="GET">
+                        <input type="text" name="q" class="form-control" placeholder="search movie">
+                     
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>

@@ -1,0 +1,10 @@
+<%- include("../header")  %>
+<p>News</p>
+<hr>
+<ul>
+    <% for (movie of movies) {%>
+    <li><a href="/movies/<%= movie.id %> "><%= movie.title %> </a></li>
+    <% } %>
+</ul>
+
+<%- include("../footer")  %>

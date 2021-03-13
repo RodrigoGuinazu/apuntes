@@ -1,0 +1,62 @@
+<header class="main-header">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-5 col-md-2">
+				<a href="/" class="main-header_home-link">
+					<img src="/images/logo-mercado-liebre.svg">
+				</a>
+			</div>
+			
+			<div class="col-7 col-md-6">
+				<form action="/search" method="GET" class="search-form">
+					<% if (typeof search != 'undefined') { %>
+						<input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input" value="<%= search %>">
+					<% } else { %>
+						<input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
+					<% } %>
+					<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+
+			<div class="col-12 col-md-4">
+				<a class="main-header_credit-link">
+					<i class="fas fa-hand-holding-usd"></i>
+					Comprá en cuotas y sin tarjeta de crédito
+				</a>
+			</div>
+		</div>
+
+		<button class="btn-toggle-navbar">
+			<i class="fas fa-bars"></i>
+		</button>
+
+		<nav class="main-navbar">
+			<ul class="left-navbar">
+				<li><a href="/products/page/1">Todos los productos</a></li>
+				<li><a href="/products/categories">Categorias</a></li>
+				<li><a href="/products/create">Vender</a></li>
+			</ul>
+
+			<ul class="right-navbar">
+				<% if(locals.user){ %>
+					<li>
+						<a href="/users/cart">
+							Mis carrito <i class="fas fa-cart-plus"></i> <span class="badge badge-info"><%= cartQty %> </span>
+						</a>
+					</li>
+					<li><a href="/users/profile"><%= locals.user.username %> <i class="fas fa-poo"></i></a></li>
+					<li>
+						<form action="/users/logout" method="POST">
+							<button class="logout" type="submit">
+								Cerrar sesión <i class="fas fa-sign-in-alt"></i>
+							</button>
+						</form>
+					</li>
+				<% } else { %>
+					<li><a href="/users/register">Creá tu cuenta <i class="far fa-address-card"></i></a></li>
+					<li><a href="/users/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+				<% } %>
+			</ul>
+		</nav>
+	</div>
+</header>

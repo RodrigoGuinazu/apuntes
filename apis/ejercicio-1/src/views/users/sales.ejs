@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: 'Registro', image: ''}) %>
+
+<body>
+   <!-- Header -->
+   <%- include('../partials/headerNavbar') %>
+   <!-- /Header -->
+
+   <div class="container products-wrapper">
+      <div class="row">
+         <div class="col-12">
+            <h1 class="products-title">Carrito de compras</h1>
+         </div>
+      </div>
+      <div class="product-detail">
+         <div class="row">
+            <div class="col-12 col-lg-8 pt-4">
+               <% if(items.length != 0){ %>
+               <% items.forEach(item => { %>
+               <a href="/users/buy-detail/<%= item.id %>">
+                  <div class="col-12 mt-3">
+                     <section class="row">
+                        <h4 class="col-4"><%= new Date(item.createdAt).toLocaleDateString() %> </h4>
+                        <section class="col-8 row info">
+                           <div>
+                              <p><%= `${item.product.name} x${item.quantity}`%> </p>
+                           </div>   
+                           <div class="col-6">
+                              <p class="product-detail-price">
+                                 $<%= item.subTotal %>
+                              </p>
+                           </div>
+                        </section>
+                        <section class="col-3">
+                           
+                        </section>
+                     </section>
+                  </div>
+               </a>
+               <hr>
+               <% }); %>
+               
+               <% } else { %>
+               <div class="col-12">
+                  <h2 class="products-title" style="padding: 100px 0; color: tomato;">Aún no tienes ventas</h2>
+               </div>
+               <% } %>
+            </div>
+            <div class="col-12 col-lg-4">
+               <article class="product-detail-info">
+                  <h2 class="product-detail-title">
+                     <%= locals.user.username %>
+                  </h2>
+                  <hr>
+                  
+               </article>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- footer -->
+   <%- include('../partials/footer') %>
+   <!-- /footer -->
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<%- include("../header")  %>
+<p><%= movie.title %> </p>
+<hr>
+<ul>
+    <li>Awards: <%= movie.awards %> </li>
+    <li>Length: <%= movie.length %> </li>
+    <li>Release Date: <%= moment(movie.release_date).format("LL") %> </li>
+    <li>Genre: <%= movie.genre ? movie.genre.name : '' %> </li>
+    <!-- <li>Autor: <%= movie.autor_id %> </li> -->
+</ul>
+
+<% if (movie.actors.length === 0) { %>
+<p>La película no tiene actores cargados</p>
+<%} else { %>
+    <h5>Actors</h5>
+<ul>
+    <% for( const actor of movie.actors) { %>
+    <li>
+        <%= actor.first_name %> <%= actor.last_name %>
+    </li>
+    <% } %>
+</ul>
+<% } %>
+    <div class="d-flex justify-content-center mb-3">
+        <a href="/movies/<%= movie.id %>/edit" class="btn btn-primary">Edit</a>
+        <form action="/movies/<%= movie.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-danger ml-2">Borrar</button>
+        </form>
+    </div>
+
+<%- include("../footer")  %>

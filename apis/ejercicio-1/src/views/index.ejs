@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', { title: 'Inicio' }) %>
+<script src="js/products.js"></script> <!-- AGREGO LA ETIQUETA SCRIPT -->
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+	
+	<!-- Banner -->
+	<div class="banner"></div>
+	<!-- /Banner -->
+
+	<!-- ultimos creados -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Ultimos creados</h2>
+			</div>
+			<div class="col-12">
+				<div class="row" id="latest-products">
+					<!-- Show the "ultimos" products -->
+					<!-- CODIGO EJS EN public/js/products.js -->
+				</div>
+			</div>		
+		</div>
+	</div>
+	<!-- /ultima visita -->
+
+	<!-- Ofertas -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Ofertas</h2>
+			</div>
+			<div class="row" id="offers-products">
+				<!-- Show the "in-sale" products -->
+				<!-- CODIGO EJS EN public/js/products.js -->	
+			</div>
+		</div>
+	</div>
+	<!-- /Ofertas -->
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
