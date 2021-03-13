@@ -1,0 +1,18 @@
+* EJERCICIO JS FRONT AJAX
+
+1) Ver como hacer para que cuando se busca algo nuevo se genere la busqueda de vuelta
+
+2) Falta todo lo de Practica Web Storage (Pagina 5 del pdf del ejercicio)
+
+----------------------------------------------------------------------------------------------
+
+* EJERCICIO 1 DE APIS
+
+1) Ver como arreglar los ifs dentro del innerHTML (Revisar los comentarios del archivo js/products.js)
+
+2) Ver el desafio 4 (Opcional):
+
+* Como hacer el fetch de un :category?
+* Revisar si esta bien haber hecho un findAll y un findOne de categories, o si hay que hacer todo con una sola ruta
+* El console.log(outdoors) da null
+* Hace falta copiar y pegar el codigo de latest (ultimos productos) en el archivo categories.js?
