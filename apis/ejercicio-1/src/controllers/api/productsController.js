@@ -61,32 +61,13 @@ let productsController = {
         })
     },
 
-    categories: function(req, res) {
-        const categories = db.Category.findAll();
-
-        categories
-        .then(function(categories){
-            let respuesta = {
-                meta: {
-                    status: 200,
-                    categories: categories.length,
-                    url: "/api/products/" + categories.name
-                },
-                data: categories
-            }
-            res.send(respuesta)
-        })
-        .catch(function(err){
-            console.log(err)
-        })  
-    },
-
     category: function(req, res) {
 
         const category = db.Category.findOne({
 			where: {	
                 name: req.params.category   
-			}
+			},
+            include: ['products']
 		});
 
         category

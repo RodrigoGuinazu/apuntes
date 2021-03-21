@@ -1,3 +1,6 @@
+// VER LOS ARCHIVOS DENTRO DE LA CARPETA controllers/api, routes/api, LA CARPETA requests (ARCHIVOS DE AXIOS) Y EL ARCHIVO routes/index.js
+// VER LINEAS DE CODIGO 14, 15, 16, 33, 34, 35 DEL app.js
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,6 +11,9 @@ const methodOverride = require('method-override'); // Pasar poder usar los méto
 
 var indexRouter = require('./routes/index');
 var moviesRouter = require('./routes/movies');
+const apiMovies = require('./routes/api/moviesRouter'); // API movies
+const apiActors = require('./routes/api/actorRouter'); // API actors
+const apiGenres = require('./routes/api/genreRouter'); // API genre
 
 var app = express();
 
@@ -24,6 +30,9 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 
 app.use('/', indexRouter);
 app.use('/movies', moviesRouter);
+app.use('/api/movies', apiMovies); // app.use de la API
+app.use('/api/actors', apiActors); // app.use de la API
+app.use('/api/genres', apiGenres); // app.use de la API
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

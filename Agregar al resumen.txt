@@ -6,6 +6,6 @@ Scope en los modelos
 
 Template literals (Template strings)
 
-|| (or) para condicionales simples?
+Spread operator (ver lineas 100 a 111 del archivo usersController.js de mi_cafe)
 
-async await
+Hacer una carpeta por cada componente (con el nombre del componente) y dentro de la carpeta tener un index.js (ya que despues cuando lo importemos donde lo necesitemos no hace falta aclarar que es el archivo index.js) que es el que exportamos al final

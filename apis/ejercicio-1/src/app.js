@@ -1,5 +1,5 @@
 // REVISAR LOS ARCHIVOS (src\controllers\api\productsController.js), (src\routes\api\productsRouter.js), (public\js\products.js), (public\js\categories.js)
-// Y LAS LINEAS 48 Y 53 DEL APP.JS
+// Y LAS LINEAS 49 Y 54 DEL APP.JS
 
 // ************ Require's ************
 const createError = require('http-errors');

@@ -2,6 +2,7 @@
 <html lang="es">
 <!-- Include Head -->
 <%- include('../partials/head', {title: 'Categorias', image: '', js: 'categories'}) %>
+
 <body>
    <!-- Header -->
    <%- include('../partials/headerNavbar') %>
@@ -18,10 +19,26 @@
          <div class="row">
             <div class="col-8 row products-container pl-5">
  
-               <div class="row" id="latest-products">
-                  <!-- Show the "ultimos" products -->
-                  <!-- CODIGO EJS EN public/js/categories.js -->
-               </div>
+               <% products.forEach(product => { %>
+				
+                  <div class="col-12 col-sm-6 col-lg-4">
+                     <section class="product-box">
+                        <a href="/products/detail/<%= product.id %> ">
+                           <figure class="product-box_image">
+                              <img src="/images/products/<%= product.image %>" alt="<%= product.name %>">
+                           </figure>
+                           <article class="product-box_data">
+                              <h2>$<%= helpers.trunc(product.price - product.price * product.discount / 100) %></h2>
+                              <% if(product.discount > 0) { %>
+                              <span><%= product.discount %> % OFF</span>
+                              <% } %>
+                              <p><%= product.name %></p>
+                              <i class="fas fa-truck"></i>
+                           </article>
+                        </a>
+                     </section>
+                  </div>
+				<% }); %>
                
             </div>
             <div class="col-12 col-lg-4">
@@ -30,7 +47,24 @@
                      Todos los productos
                   </h2>
                   <hr>
-                  <!-- CODIGO EJS EN public/js/categories.js -->
+
+                  <% if (categories.length > 0) { %>
+
+                  <% categories.forEach(category => { %>
+                     <% if (category.products.length > 0) { %>
+                        <a class="<%= category.name %>" href="/products/categories/<%= category.name %>">
+                           <h2 class="product-detail-title categories" style="font-size: 15px; cursor: pointer;" id="<%= category.name %>">
+                              <%= category.name %> 
+                           </h2>
+                        </a>
+                        <hr>
+                     <% } %>
+                     
+                  <% }) %>
+
+                  <% } %>
+                  
+                  
                </article>
             </div>
          </div>
