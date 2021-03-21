@@ -1,0 +1,14 @@
+let recomendacion = []
+
+        let randomNum = function() {
+            const numeroRandom = products[Math.floor(Math.random() * products.length)];
+            if (recomendacion.includes(numeroRandom)) {
+                randomNum()
+            } else {
+                recomendacion.push(numeroRandom);
+            }
+        }
+
+        while(recomendacion.length < 4){
+            randomNum()
+        }
